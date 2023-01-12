@@ -1,6 +1,6 @@
 const eventContainer = document.querySelector(".event-container");
 const submitBtn = document.querySelector("submit-btn");
-// Create Event
+// Post Event data to mockapi
 async function postEvent() {
   let postEventdata = {
     eventname: document.querySelector("#add-title").value,
@@ -23,7 +23,7 @@ async function postEvent() {
   }
 }
 
-// Get Event Data
+// Get Event Data from mockapi
 async function geteventInfo() {
   const eventTable = document.querySelector(".event-table");
   try {
