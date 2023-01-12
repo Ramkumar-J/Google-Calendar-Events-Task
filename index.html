@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Calander</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="app-title">
+      <img class="app-logo" src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_11_2x.png" alt="app logo"> 
+      <h1 class="app-name">Calendar</h1>
+    </div>
+      <button class="create-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Create</button>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Event Form</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="postEvent();return false;">
+            <div class="form-field">
+            <label for="add-title">Add Title</label><br>
+            <input type="text" id="add-title" class="form-control">
+        </div>
+        <div class="form-field">
+            <label for="add-date">Add Date</label><br>
+            <input type="date" id="add-date" class="form-control">
+        </div>
+        <div class="form-field">
+            <label for="start-time">Start Time</label><br>
+            <input type="time" id="start-time" class="form-control">
+        </div>
+        <div class="form-field">
+          <label for="end-time">End Time</label><br>
+          <input type="time" id="end-time" class="form-control">
+      </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-primary submit-btn">
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+    </header>
+    <!-- <aside>
+        <ul>
+            <li>atrtu</li>
+            <li>ru6i</li>
+            <li>rstdi</li>
+            <li>fduf</li>
+            <li>drur</li>
+        </ul>
+    </aside> -->
+    <main class="container-fluid event-container">
+        <!-- <table class="events-table">
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jan, sun</td>
+                    <td>🟢 All day</td>
+                    <td>New year</td>
+                </tr>
+            </tbody>
+        </table> -->
+        <ul class="event-table">
+            <!-- <li class="event-list">
+                <p class="event-date">1</p>
+                <p class="event-day">Jan, Sun</p>
+                <button class="event-info" data-bs-toggle="modal" data-bs-target="#eventListModal">
+                <p class="event-time">🟢 All day</p>
+                <p class="event-name">New year</p>
+                </button> -->
+                <!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+            <!-- </li><hr> -->
+            <!-- <li class="event-list">
+                <p class="event-date">14</p>
+                <p class="event-day">Jan, Mon</p>
+                <button class="event-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <p class="event-time">🟢 All day</p>
+                <p class="event-name">Pongal</p>
+                </button>
+            </li><hr>
+            <li class="event-list">
+              <p class="event-date">14</p>
+              <p class="event-day">Jan, Mon</p>
+              <button class="event-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <p class="event-time">🟢 All day</p>
+              <p class="event-name">Pongal</p>
+              </button>
+          </li><hr> -->
+        </ul>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
