@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Google Calendar Event list using HTML, CSS and JavaScript">
+    <meta name="keywords" content="Google calendar, Events list, Google calendar events, HTML, CSS">
+    <meta name="author" content="Ramkumar J">
     <title>Google Calander</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a56d3960c7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-    <div class="app-title">
-      <img class="app-logo" src="https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_11_2x.png" alt="app logo"> 
-      <h1 class="app-name">Calendar</h1>
-    </div>
-      <button class="create-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Create</button>
-      <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <section class="app-title">
+      <img class="app-logo" src="./assets/calendar_12_2x.png" alt="app logo"> 
+      <h1 class="app-name">Calendar - Events List</h1>
+    </section>
+      <button class="create-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i> <span>Create</span></button>
+<section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -34,14 +38,6 @@
             <label for="add-date">Add Date</label><br>
             <input type="date" id="add-date" class="form-control">
         </div>
-        <div class="form-field">
-            <label for="start-time">Start Time</label><br>
-            <input type="time" id="start-time" class="form-control">
-        </div>
-        <div class="form-field">
-          <label for="end-time">End Time</label><br>
-          <input type="time" id="end-time" class="form-control">
-      </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -50,72 +46,36 @@
       </form>
       </div>
     </div>
-  </div>
+</section>
     </header>
-    <!-- <aside>
-        <ul>
-            <li>atrtu</li>
-            <li>ru6i</li>
-            <li>rstdi</li>
-            <li>fduf</li>
-            <li>drur</li>
-        </ul>
-    </aside> -->
     <main class="container-fluid event-container">
-        <!-- <table class="events-table">
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Jan, sun</td>
-                    <td>🟢 All day</td>
-                    <td>New year</td>
-                </tr>
-            </tbody>
-        </table> -->
-        <ul class="event-table">
-            <!-- <li class="event-list">
-                <p class="event-date">1</p>
-                <p class="event-day">Jan, Sun</p>
-                <button class="event-info" data-bs-toggle="modal" data-bs-target="#eventListModal">
-                <p class="event-time">🟢 All day</p>
-                <p class="event-name">New year</p>
-                </button> -->
-                <!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <section class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 calendar-info">
+          <img class="img-fluid" src="./assets/pngtree-january-2023-calendar-blue-and-red-colors-png-image_4536950.png"  alt="January calendar">
+          <h2 class="mt-5">My Calendars</h2>
+          <div class="checkbox-area">
+          <input type="checkbox" id="check-name">
+          <label for="check-name">Rajkumar</label>
         </div>
-        <div class="modal-body">
-          ...
+        <div class="checkbox-area">
+          <input type="checkbox" id="check-name">
+          <label for="check-name">Contacts</label>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="checkbox-area">
+          <input type="checkbox" id="check-name">
+          <label for="check-name">Remainders</label>
         </div>
-      </div>
-    </div>
-  </div> -->
-            <!-- </li><hr> -->
-            <!-- <li class="event-list">
-                <p class="event-date">14</p>
-                <p class="event-day">Jan, Mon</p>
-                <button class="event-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <p class="event-time">🟢 All day</p>
-                <p class="event-name">Pongal</p>
-                </button>
-            </li><hr>
-            <li class="event-list">
-              <p class="event-date">14</p>
-              <p class="event-day">Jan, Mon</p>
-              <button class="event-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <p class="event-time">🟢 All day</p>
-              <p class="event-name">Pongal</p>
-              </button>
-          </li><hr> -->
-        </ul>
+        <div class="checkbox-area">
+          <input type="checkbox" id="check-name">
+          <label for="check-name">Tasks</label>
+        </div>
+        </div>
+        <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+          <h2 class="text-primary">Events List</h2>
+          <ul class="event-table">
+          </ul>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
 </body>
