@@ -26,7 +26,7 @@ header{
     margin-left:20px;
 }
 .app-name{
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-left:10px;
     color:rgb(66, 66, 66);
     font-weight: 400;
@@ -143,12 +143,13 @@ header{
         font-size: 0.75rem;
     }
     .app-logo{
-        width:30px;
-        height: 30px;
+        /* width:30px;
+        height: 30px; */
         margin-left:10px;
     }
     .app-name{
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        margin-top: 5px;
     }
     .create-btn{
         margin-right: 10px;
